@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="DEBUG">
+    <Properties>
+        <!-- Set to true to delete the log file on startup -->
+        <Property name="deleteOnStart">true</Property>
+    </Properties>
+
+    <Appenders>
+        <!-- Selenium Log File (Overwrites each time) -->
+        <File name="SeleniumLog" fileName="${sys:user.dir}/src/test/resources/logs/Selenium.log" append="false">
+            <PatternLayout>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n</Pattern>
+            </PatternLayout>
+        </File>
+
+        <!-- Application Log File (Overwrites each time) -->
+        <File name="ApplicationLog" fileName="${sys:user.dir}/src/test/resources/logs/Application.log" append="false">
+            <PatternLayout>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n</Pattern>
+            </PatternLayout>
+        </File>
+
+        <!-- Console Logging -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n</Pattern>
+            </PatternLayout>
+        </Console>
+    </Appenders>
+    
+    
+
+    <Loggers>
+    
+     <!-- Selenium Logger -->
+        <Logger name="selenium" level="trace" additivity="false">
+            <AppenderRef ref="SeleniumLog"/>
+        </Logger>
+
+        <!-- Application Logger -->
+        <Logger name="application" level="trace" additivity="false">
+            <AppenderRef ref="ApplicationLog"/>
+        </Logger>
+        
+        
+        <!-- Root Logger -->
+        <Root level="trace">
+            <AppenderRef ref="Console"/>
+             
+            <AppenderRef ref="SeleniumLog"/>  
+            <AppenderRef ref="ApplicationLog"/>
+        </Root>
+    </Loggers>
+</Configuration>

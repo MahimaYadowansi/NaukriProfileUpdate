@@ -1,0 +1,23 @@
+2025-02-20 18:07:04 INFO  BaseTest:68 - Log4j2 configuration loaded successfully.
+2025-02-20 18:07:04 INFO  BaseTest:80 - Config file loaded successfully.
+2025-02-20 18:07:04 INFO  BaseTest:87 - OR file loaded successfully.
+2025-02-20 18:07:07 INFO  BaseTest:101 - Chrome Browser Launched.
+2025-02-20 18:07:12 INFO  BaseTest:119 - Navigated to: https://www.naukri.com/
+2025-02-20 18:07:13 INFO  BaseTest:123 - Browser window maximized.
+2025-02-20 18:07:13 INFO  BaseTest:131 - Implicit wait set to null seconds.
+2025-02-20 18:07:14 INFO  CustomListeners:82 - Test suite started: Updating Profile
+2025-02-20 18:07:14 INFO  CustomListeners:33 - Test start: naukriLogin
+2025-02-20 18:07:14 INFO  BaseTest:38 - Clicked on login button
+2025-02-20 18:07:15 INFO  BaseTest:44 - Email entered
+2025-02-20 18:07:15 INFO  BaseTest:48 - Password entered
+2025-02-20 18:07:26 INFO  BaseTest:56 - Login is Successful !!!
+2025-02-20 18:07:26 INFO  CustomListeners:38 - Test passed: naukriLogin
+2025-02-20 18:07:26 INFO  CustomListeners:33 - Test start: updateNaukriResume
+2025-02-20 18:07:27 INFO  BaseTest:77 - Clicked on  View profile button
+2025-02-20 18:07:28 INFO  BaseTest:94 - Resume Path: C:\Users\DELL\eclipse-workspace\NaukriProfileAutomation\src\test\resources\resume\MAHIMA-TEST Engineer.pdf
+2025-02-20 18:07:28 INFO  BaseTest:102 - Resume Uploaded !!!
+2025-02-20 18:07:39 ERROR BaseTest:113 - Success message not found.
+2025-02-20 18:07:39 INFO  CustomListeners:38 - Test passed: updateNaukriResume
+2025-02-20 18:07:39 INFO  CustomListeners:87 - Test suite finished: Updating Profile
+2025-02-20 18:07:40 INFO  BaseTest:187 - Browser closed.
+2025-02-20 18:07:41 INFO  BaseTest:190 - Test execution completed.
