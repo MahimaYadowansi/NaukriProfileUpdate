@@ -104,7 +104,7 @@ public class UpdateResume extends BaseTest{
 
 	            // Wait and capture success message
 	            Thread.sleep(5000);
-	            String successMessageText = getSuccessMessage("//div[contains(text(),'Resume has been successfully uploaded')]");
+	            String successMessageText = getSuccessMessage("//span[@id='attachCVMsgBox']");
 	            if (!successMessageText.isEmpty()) {
 	                System.out.println("Success Message: " + successMessageText);
 	                logger.info("Resume upload confirmed: " + successMessageText);
@@ -120,20 +120,32 @@ public class UpdateResume extends BaseTest{
 	        }
 	    }
 
-	    //  Helper method to get text from a disappearing element
-	    private String getSuccessMessage(String xpath) {
-	        try {
-	            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5)); // Short wait time
-	            WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
+		private String getSuccessMessage(String xpath) {
+		    try {
+		        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3)); 
+		        WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
 
-	            //  Use JavaScript to capture the message before it disappears
-	            JavascriptExecutor js = (JavascriptExecutor) driver;
-	            return (String) js.executeScript("return arguments[0].innerText;", element);
+		        // Use JavaScript to capture the message BEFORE it disappears
+		        JavascriptExecutor js = (JavascriptExecutor) driver;
+		        String message = (String) js.executeScript(
+		            "var target = arguments[0];" +
+		            "var observer = new MutationObserver(function(mutations, observer) {" +
+		            "   observer.disconnect();" +  // Stop observing after getting the text
+		            "});" +
+		            "observer.observe(target, { childList: true, subtree: true });" +
+		            "return target.innerText;", element);
+		        
+		        logger.info("Success message: Resume updated successfully !!!");
+	            test.log(Status.PASS, "Success message: Resume updated successfully !!!");
 
-	        } catch (TimeoutException e) {
-	            System.out.println("Message disappears too fast");
-	            return ""; // Return empty string if message disappears too fast
-	        }
-	    }
+		        return message.trim(); 
+
+		    } catch (TimeoutException e) {
+		        System.out.println("Success message disappeared before capture.");
+		        logger.error("Success message disappeared before capture.");
+	            test.log(Status.FAIL, "Success message disappeared before capture.");
+		        return ""; 
+		    }
+		}
 
 	}
