@@ -24,8 +24,8 @@
      ```git clone https://github.com/MahimaYadowansi/NaukriProfileUpdate.git
      ```cd NaukriProfileUpdate 
 # Configure Environment Variables
- - ``` set NAUKRI_USERNAME=your_email@example.com
- - ``` set NAUKRI_PASSWORD=your_password 
+  ``` set NAUKRI_USERNAME=your_email@example.com
+  ``` set NAUKRI_PASSWORD=your_password 
 # Run the Automation Script
  - Use the following Maven command to execute the tests:
  -  ``` mvn clean test ```
@@ -33,7 +33,7 @@
  - Install Jenkins and configure it with a Maven Job.
  -  In Jenkins, set environment variables for credentials under Manage Jenkins > Configure System.
  -  Schedule the job to run daily at 9 AM using Build Triggers > Schedule with the cron expression:
-     ```   0 9 * * *
+    0 9 * * *
     
    
     
