@@ -1,28 +1,28 @@
-2025-02-20 18:34:06 INFO  BaseTest:68 - Log4j2 configuration loaded successfully.
-2025-02-20 18:34:06 INFO  BaseTest:80 - Config file loaded successfully.
-2025-02-20 18:34:06 INFO  BaseTest:87 - OR file loaded successfully.
-2025-02-20 18:34:09 INFO  BaseTest:101 - Chrome Browser Launched.
-2025-02-20 18:34:10 INFO  BaseTest:119 - Navigated to: https://www.naukri.com/
-2025-02-20 18:34:16 INFO  BaseTest:123 - Browser window maximized.
-2025-02-20 18:34:16 INFO  BaseTest:131 - Implicit wait set to null seconds.
-2025-02-20 18:34:17 INFO  CustomListeners:82 - Test suite started: Updating Profile
-2025-02-20 18:34:17 INFO  CustomListeners:33 - Test start: naukriLogin
-2025-02-20 18:34:18 INFO  BaseTest:38 - Clicked on login button
-2025-02-20 18:34:19 INFO  BaseTest:44 - Email entered
-2025-02-20 18:34:19 INFO  BaseTest:48 - Password entered
-2025-02-20 18:34:29 INFO  BaseTest:56 - Login is Successful !!!
-2025-02-20 18:34:29 INFO  CustomListeners:38 - Test passed: naukriLogin
-2025-02-20 18:34:29 INFO  CustomListeners:33 - Test start: updateNaukriResume
-2025-02-20 18:34:32 INFO  BaseTest:77 - Clicked on  View profile button
-2025-02-20 18:34:32 INFO  BaseTest:94 - Resume Path: C:\Users\DELL\eclipse-workspace\NaukriProfileAutomation\src\test\resources\resume\MAHIMA-TEST Engineer.pdf
-2025-02-20 18:34:32 INFO  BaseTest:102 - Resume Uploaded !!!
-2025-02-20 18:34:37 INFO  BaseTest:138 - Success message: Resume updated successfully !!!
-2025-02-20 18:34:37 INFO  BaseTest:110 - Resume upload confirmed: GreenTick
+2025-03-06 13:58:31 INFO  BaseTest:68 - Log4j2 configuration loaded successfully.
+2025-03-06 13:58:31 INFO  BaseTest:80 - Config file loaded successfully.
+2025-03-06 13:58:31 INFO  BaseTest:87 - OR file loaded successfully.
+2025-03-06 13:58:41 INFO  BaseTest:101 - Chrome Browser Launched.
+2025-03-06 13:58:47 INFO  BaseTest:119 - Navigated to: https://www.naukri.com/
+2025-03-06 13:58:47 INFO  BaseTest:123 - Browser window maximized.
+2025-03-06 13:58:47 INFO  BaseTest:131 - Implicit wait set to null seconds.
+2025-03-06 13:58:48 INFO  CustomListeners:82 - Test suite started: Updating Profile
+2025-03-06 13:58:48 INFO  CustomListeners:33 - Test start: naukriLogin
+2025-03-06 13:58:49 INFO  BaseTest:38 - Clicked on login button
+2025-03-06 13:58:50 INFO  BaseTest:44 - Email entered
+2025-03-06 13:58:50 INFO  BaseTest:48 - Password entered
+2025-03-06 13:59:00 INFO  BaseTest:56 - Login is Successful !!!
+2025-03-06 13:59:00 INFO  CustomListeners:38 - Test passed: naukriLogin
+2025-03-06 13:59:00 INFO  CustomListeners:33 - Test start: updateNaukriResume
+2025-03-06 13:59:02 INFO  BaseTest:77 - Clicked on  View profile button
+2025-03-06 13:59:03 INFO  BaseTest:94 - Resume Path: C:\Users\DELL\eclipse-workspace\NaukriProfileAutomation\src\test\resources\resume\SoftwareTestEngineer(MAHIMA).pdf
+2025-03-06 13:59:03 INFO  BaseTest:102 - Resume Uploaded !!!
+2025-03-06 13:59:08 INFO  BaseTest:138 - Success message: Resume updated successfully !!!
+2025-03-06 13:59:08 INFO  BaseTest:110 - Resume upload confirmed: GreenTick
 
 Success
 
 Resume has been successfully uploaded.
-2025-02-20 18:34:37 INFO  CustomListeners:38 - Test passed: updateNaukriResume
-2025-02-20 18:34:37 INFO  CustomListeners:87 - Test suite finished: Updating Profile
-2025-02-20 18:34:40 INFO  BaseTest:187 - Browser closed.
-2025-02-20 18:34:40 INFO  BaseTest:190 - Test execution completed.
+2025-03-06 13:59:08 INFO  CustomListeners:38 - Test passed: updateNaukriResume
+2025-03-06 13:59:08 INFO  CustomListeners:87 - Test suite finished: Updating Profile
+2025-03-06 13:59:10 INFO  BaseTest:187 - Browser closed.
+2025-03-06 13:59:10 INFO  BaseTest:190 - Test execution completed.

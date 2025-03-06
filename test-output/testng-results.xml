@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-20T18:34:17 IST" name="Suite" finished-at="2025-02-20T18:34:37 IST" duration-ms="19621">
+  <suite started-at="2025-03-06T13:58:48 IST" name="Suite" finished-at="2025-03-06T13:59:08 IST" duration-ms="19864">
     <groups>
     </groups>
-    <test started-at="2025-02-20T18:34:17 IST" name="Updating Profile" finished-at="2025-02-20T18:34:37 IST" duration-ms="19621">
+    <test started-at="2025-03-06T13:58:48 IST" name="Updating Profile" finished-at="2025-03-06T13:59:08 IST" duration-ms="19864">
       <class name="test.UpdateResume">
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.UpdateResume@5bfa8cc5]" started-at="2025-02-20T18:34:05 IST" name="setup" finished-at="2025-02-20T18:34:17 IST" duration-ms="12134" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.UpdateResume@5bfa8cc5]" started-at="2025-03-06T13:58:30 IST" name="setup" finished-at="2025-03-06T13:58:48 IST" duration-ms="17745" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="naukriLogin()[pri:1, instance:test.UpdateResume@5bfa8cc5]" started-at="2025-02-20T18:34:17 IST" name="naukriLogin" finished-at="2025-02-20T18:34:29 IST" duration-ms="11949" status="PASS">
+        <test-method signature="naukriLogin()[pri:1, instance:test.UpdateResume@5bfa8cc5]" started-at="2025-03-06T13:58:48 IST" name="naukriLogin" finished-at="2025-03-06T13:59:00 IST" duration-ms="12062" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- naukriLogin -->
-        <test-method signature="updateNaukriResume()[pri:2, instance:test.UpdateResume@5bfa8cc5]" started-at="2025-02-20T18:34:29 IST" name="updateNaukriResume" finished-at="2025-02-20T18:34:37 IST" duration-ms="7556" status="PASS">
+        <test-method signature="updateNaukriResume()[pri:2, instance:test.UpdateResume@5bfa8cc5]" started-at="2025-03-06T13:59:00 IST" name="updateNaukriResume" finished-at="2025-03-06T13:59:08 IST" duration-ms="7678" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateNaukriResume -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:test.UpdateResume@5bfa8cc5]" started-at="2025-02-20T18:34:38 IST" name="teardown" finished-at="2025-02-20T18:34:40 IST" duration-ms="2359" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:test.UpdateResume@5bfa8cc5]" started-at="2025-03-06T13:59:09 IST" name="teardown" finished-at="2025-03-06T13:59:10 IST" duration-ms="762" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
