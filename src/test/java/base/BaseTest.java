@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.NoSuchElementException;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
@@ -27,6 +26,8 @@ import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -53,7 +54,8 @@ public class BaseTest {
 	
 			
 			@BeforeSuite
-			public void setup() throws IOException {
+			@Parameters("browser")  // Accept browser parameter from testng.xml
+			 public void setup(@Optional("chrome") String browser) throws IOException {
 				
 				
 				// Force Log4j2 to load configuration
@@ -71,7 +73,7 @@ public class BaseTest {
 				
 				
 				
-				if (driver == null) {
+				//if (driver == null) {
 					// Load config file
 					fis = new FileInputStream(
 							System.getProperty("user.dir") + "\\src\\test\\resources\\properties\\config.properties");
@@ -86,12 +88,45 @@ public class BaseTest {
 
 					logger.info("OR file loaded successfully.");
 
-				}
+		//		}
 				// Initialize ExtentTest
 				test = extent.createTest("Naukri profile automation", "Run Base tests");
 				
+				
+				
+				// Use the 'browser' parameter from TestNG
+			    switch (browser.toLowerCase()) {
+			        case "chrome":
+			            WebDriverManager.chromedriver().setup();
+			            ChromeOptions chromeOptions = new ChromeOptions();
+			            chromeOptions.setCapability("goog:loggingPrefs", java.util.Collections.singletonMap(LogType.PERFORMANCE, "ALL"));
+			            driver = new ChromeDriver(chromeOptions);
+			            logger.info("Chrome Browser Launched.");
+			            break;
 
-				// Select Browser and configure performance logging
+			        case "firefox":
+			            WebDriverManager.firefoxdriver().setup();
+			            FirefoxOptions firefoxOptions = new FirefoxOptions();
+			            firefoxOptions.setCapability("moz:firefoxOptions", java.util.Collections.singletonMap(LogType.PERFORMANCE, "ALL"));
+			            driver = new FirefoxDriver(firefoxOptions);
+			            logger.info("Firefox Browser Launched.");
+			            break;
+
+			        case "edge":
+			            WebDriverManager.edgedriver().setup();
+			            EdgeOptions edgeOptions = new EdgeOptions();
+			            edgeOptions.setCapability("ms:loggingPrefs", java.util.Collections.singletonMap(LogType.PERFORMANCE, "ALL"));
+			            driver = new EdgeDriver(edgeOptions);
+			            logger.info("Edge Browser Launched.");
+			            break;
+
+			        default:
+			            throw new IllegalArgumentException("Invalid browser: " + browser);
+			    }
+				
+				
+/*
+				// Select Browser and configure performance logging from config file
 		        if (config.getProperty("browser").equals("chrome")) {
 		            WebDriverManager.chromedriver().setup();
 		            ChromeOptions chromeOptions = new ChromeOptions();
@@ -111,7 +146,7 @@ public class BaseTest {
 		            edgeOptions.setCapability("ms:loggingPrefs", java.util.Collections.singletonMap(LogType.PERFORMANCE, "ALL"));
 		            driver = new EdgeDriver(edgeOptions);
 		            logger.info("Edge Browser Launched.");
-		        }
+		        }*/
 
 		        // Open URL
 		        driver.get(config.getProperty("testsiteurl"));
