@@ -1,9 +1,17 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>NaukriAutomation.com</groupId>
-  <artifactId>NaukriProfileAutomation</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <dependencies>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>NaukriAutomation.com</groupId>
+	<artifactId>NaukriProfileAutomation</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<!-- Add properties to set Java version -->
+	<properties>
+		<maven.compiler.source>8</maven.compiler.source>
+		<maven.compiler.target>8</maven.compiler.target>
+	</properties>
+
+	<dependencies>
 		<!--
 		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
@@ -26,7 +34,7 @@
 			<artifactId>extentreports</artifactId>
 			<version>5.1.1</version>
 		</dependency>
-		
+
 		<!--
 		https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
 		<dependency>
@@ -34,7 +42,7 @@
 			<artifactId>webdrivermanager</artifactId>
 			<version>5.7.0</version>
 		</dependency>
-		
+
 		<!--
 		https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
 		<dependency>
@@ -49,7 +57,7 @@
 			<artifactId>log4j-api</artifactId>
 			<version>2.24.3</version>
 		</dependency>
-		
+
 		<!-- https://mvnrepository.com/artifact/org.dom4j/dom4j -->
 		<dependency>
 			<groupId>org.dom4j</groupId>
@@ -62,24 +70,33 @@
 			<artifactId>guice</artifactId>
 			<version>5.1.0</version>
 		</dependency>
-		
+
 	</dependencies>
 	<build>
+    <plugins>
+      <!-- Add Maven Compiler Plugin -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.13.0</version>
+        <configuration>
+          <source>${maven.compiler.source}</source>
+          <target>${maven.compiler.target}</target>
+        </configuration>
+      </plugin>
 
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.2.5</version>
-				<configuration>
-					<testFailureIgnore> false </testFailureIgnore>
-					<suiteXmlFiles>
-						<suiteXmlFile> src/test/resources/runners/testng.xml</suiteXmlFile>
-					</suiteXmlFiles>
-				</configuration>
-			</plugin>
-
-		</plugins>
-		</build>
-
+      <!-- Existing Surefire Plugin -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.2.5</version>
+        <configuration>
+          <testFailureIgnore>false</testFailureIgnore>
+          <suiteXmlFiles>
+            <suiteXmlFile>src/test/resources/runners/testng.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
