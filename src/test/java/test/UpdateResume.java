@@ -89,7 +89,7 @@ public class UpdateResume extends BaseTest{
 	            }
 
 	            // File path correction
-	            String resumePath = new File("src/test/resources/resume/SoftwareTestEngineer-MahimaResume.pdf").getAbsolutePath();
+	            String resumePath = new File("src/test/resources/resume/QA MAHIMA - Resume.pdf").getAbsolutePath();
 	            System.out.println("Resume Path: " + resumePath);
 	            logger.info("Resume Path: " + resumePath);
 

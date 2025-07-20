@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-09T13:00:29 IST" name=" Update profile Cross Browser Suite" finished-at="2025-03-09T13:01:04 IST" duration-ms="34903">
+  <suite started-at="2025-07-20T15:29:14 IST" name="Default suite" finished-at="2025-07-20T15:29:36 IST" duration-ms="21673">
     <groups>
     </groups>
-    <test started-at="2025-03-09T13:00:29 IST" name="Edge Test" finished-at="2025-03-09T13:00:37 IST" duration-ms="8667">
+    <test started-at="2025-07-20T15:29:14 IST" name="Default test" finished-at="2025-07-20T15:29:36 IST" duration-ms="21673">
       <class name="test.UpdateResume">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:test.UpdateResume@c260bdc]" started-at="2025-03-09T13:00:18 IST" name="setup" finished-at="2025-03-09T13:00:29 IST" duration-ms="10338" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:test.UpdateResume@efde75f]" started-at="2025-07-20T15:29:01 IST" name="setup" finished-at="2025-07-20T15:29:14 IST" duration-ms="13230" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,43 +18,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="naukriLogin()[pri:1, instance:test.UpdateResume@c260bdc]" started-at="2025-03-09T13:00:29 IST" name="naukriLogin" finished-at="2025-03-09T13:00:32 IST" duration-ms="2885" status="PASS">
+        <test-method signature="naukriLogin()[pri:1, instance:test.UpdateResume@efde75f]" started-at="2025-07-20T15:29:14 IST" name="naukriLogin" finished-at="2025-07-20T15:29:27 IST" duration-ms="12550" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- naukriLogin -->
-        <test-method signature="updateNaukriResume()[pri:2, instance:test.UpdateResume@c260bdc]" started-at="2025-03-09T13:00:32 IST" name="updateNaukriResume" finished-at="2025-03-09T13:00:37 IST" duration-ms="5647" status="PASS">
+        <test-method signature="updateNaukriResume()[pri:2, instance:test.UpdateResume@efde75f]" started-at="2025-07-20T15:29:27 IST" name="updateNaukriResume" finished-at="2025-07-20T15:29:36 IST" duration-ms="9046" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateNaukriResume -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:test.UpdateResume@c260bdc]" started-at="2025-03-09T13:01:04 IST" name="teardown" finished-at="2025-03-09T13:01:05 IST" duration-ms="814" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:test.UpdateResume@efde75f]" started-at="2025-07-20T15:29:36 IST" name="teardown" finished-at="2025-07-20T15:29:40 IST" duration-ms="4449" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- test.UpdateResume -->
-    </test> <!-- Edge Test -->
-    <test started-at="2025-03-09T13:00:29 IST" name="Chrome Test" finished-at="2025-03-09T13:00:44 IST" duration-ms="15293">
-      <class name="test.UpdateResume">
-        <test-method signature="naukriLogin()[pri:1, instance:test.UpdateResume@4a3329b9]" started-at="2025-03-09T13:00:29 IST" name="naukriLogin" finished-at="2025-03-09T13:00:31 IST" duration-ms="1763" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- naukriLogin -->
-        <test-method signature="updateNaukriResume()[pri:2, instance:test.UpdateResume@4a3329b9]" started-at="2025-03-09T13:00:31 IST" name="updateNaukriResume" finished-at="2025-03-09T13:00:44 IST" duration-ms="13392" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updateNaukriResume -->
-      </class> <!-- test.UpdateResume -->
-    </test> <!-- Chrome Test -->
-    <test started-at="2025-03-09T13:00:29 IST" name="Firefox Test" finished-at="2025-03-09T13:01:04 IST" duration-ms="34903">
-      <class name="test.UpdateResume">
-        <test-method signature="naukriLogin()[pri:1, instance:test.UpdateResume@5ad10c1a]" started-at="2025-03-09T13:00:29 IST" name="naukriLogin" finished-at="2025-03-09T13:00:53 IST" duration-ms="24198" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- naukriLogin -->
-        <test-method signature="updateNaukriResume()[pri:2, instance:test.UpdateResume@5ad10c1a]" started-at="2025-03-09T13:00:53 IST" name="updateNaukriResume" finished-at="2025-03-09T13:01:04 IST" duration-ms="10531" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updateNaukriResume -->
-      </class> <!-- test.UpdateResume -->
-    </test> <!-- Firefox Test -->
-  </suite> <!--  Update profile Cross Browser Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
